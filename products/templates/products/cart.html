@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Корзина</h1>
+    <ul>
+        {% for item in cart %}
+            <li>{{ item.name }} - {{ item.price }} руб.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'product_list' %}">Назад к продуктам</a>
+    <a href="{% url 'purchase' %}">Перейти к покупке</a>
+</body>
+</html>

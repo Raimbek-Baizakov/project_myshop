@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Продукты</title>
+</head>
+<body>
+    <h1>Продукты</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - {{ product.price }} руб.
+                <a href="{% url 'add_to_cart' product.id %}">В корзину</a>
+                <a href="{% url 'buy_now' product.id %}">Купить сразу</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
